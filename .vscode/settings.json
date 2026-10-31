@@ -1,0 +1,46 @@
+{
+  "github.copilot.inlineSuggest.enable": false,
+  "editor.inlineSuggest.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "java.inlayHints.parameterNames.enabled": "literals",
+  "java.inlayHints.parameterNames.exclusions": [
+    "println"
+  ],
+  "java.compile.nullAnalysis.mode": "disabled",
+  "java.errors.incompleteClasspath.severity": "warning",
+  "problems.showCurrentInStatus": true,
+  "java.test.config": [
+    {
+      "name": "JUnit (Default)",
+      "workingDirectory": "${workspaceFolder}",
+      "args": [],
+      "vmArgs": []
+    }
+  ],
+  "java.test.defaultConfig": "JUnit (Default)",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/bin": true,
+    "**/out": true,
+    "**/target": true,
+    "**/.github": true,
+    "**/.devcontainer": true,
+    "**/.gitignore": true,
+    "**/LICENSE": true,
+    "**/.vscode": true,
+    "**/pom.xml": true
+  },
+  "files.readonlyInclude": {
+    "**/test/**": true
+  }
+}
