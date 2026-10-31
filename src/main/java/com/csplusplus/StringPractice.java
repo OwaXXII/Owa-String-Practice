@@ -17,31 +17,41 @@ public class StringPractice {
     // Example: printChars("cat") prints c, then a, then t (each on its own line).
     public static void printChars(String s) {
         // PLAN (write your steps in plain English first):
-        //
+        // Goes through each letter in the word
+        // Each letter it will print it out
 
         // DO THIS: write your code below
-
+        for (int i=0; i < s.length(); i++){
+            System.out.println(s.substring(i,i+1));
+        }
     }
 
     // Task 2: print every character of s from LAST to FIRST, one per line.
     // Example: printReverse("cat") prints t, then a, then c.
     public static void printReverse(String s) {
         // PLAN (write your steps in plain English first):
-        //
+        //Traverse the index from the last to first
+        //print it out
 
         // DO THIS: write your code below
-
+        for (int i = s.length()-1; i>=0; i--){
+            System.out.println(s.substring(i, i+1));
+        }
     }
 
     // Task 3: return how many times target appears inside text, including overlaps.
     // Example: countOccurrences("banana", "ana") returns 2.
     public static int countOccurrences(String text, String target) {
         // PLAN (write your steps in plain English first):
-        //
-
+        // traverse the target text with the length of the target text
         // DO THIS: write your code below
-
-        return 0; // replace this line when your method is ready
+        int count = 0;
+        for (int i = 0; i <= text.length()-target.length(); i++){
+            if (text.substring(i,i+target.length()).equals(target)){
+                count++;
+            }
+        }
+        return count; // replace this line when your method is ready
     }
 
     // Task 4: return a NEW string with the word inserted after every word of the sentence.
@@ -50,11 +60,20 @@ public class StringPractice {
     // Assume single spaces between words and no space at the start or end.
     public static String insertWord(String sentence, String word) {
         // PLAN (write your steps in plain English first):
-        //
+        // every time there is a space, add a like
 
         // DO THIS: write your code below
-
-        return ""; // replace this line when your method is ready
+        String result = "";
+        for (int i = 0; i < sentence.length(); i++){
+            if (sentence.substring(i, i+1).equals(" ")){
+                result = result + sentence.substring(i,i+1) + word + " ";
+            }
+            else{
+                result = result + sentence.substring(i,i+1);
+            }
+        }
+        result = result + " " + word;
+        return result; // replace this line when your method is ready
     }
 
     // STRETCH A (optional): return true if s reads the same forward and backward.
@@ -72,7 +91,7 @@ public class StringPractice {
     public static void main(String[] args) {
         // Try your methods here. Run this file to see your output.
     }
-    
+
     /* REFLECTION: Answer in your own words below.
 
         1. Why does countOccurrences stop at text.length() - target.length()?
