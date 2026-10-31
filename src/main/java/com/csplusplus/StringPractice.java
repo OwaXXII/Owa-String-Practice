@@ -3,10 +3,10 @@ package com.csplusplus;
 /*
  * AI Use Statement
  * ----------------
- * Did you use AI on this assignment? (yes / no):
+ * Did you use AI on this assignment? (yes):
  *
  * If yes, briefly describe how (planning, debugging, drafting code, etc.):
- *
+ *It ran the code for me and walked me through my issuees.
  *
  * Reminder: retype any AI-generated code yourself. Do not paste it in.
  */
@@ -96,14 +96,17 @@ public class StringPractice {
 
         1. Why does countOccurrences stop at text.length() - target.length()?
 
-            Your answer:
+            Your answer: Because the window is potentially greater than traversing
+            through one index so you can't just have it less than length of text.
+            So you actually have to subtract target length from text length.
 
         2. Why can’t insertWord change the original sentence? Use the words immutable and reassign.
 
-            Your answer:
+            Your answer: Because string is immutable meaning you cannot change the value, but you can reassign it to a different one.
+            The previous one exists, but you change the location it's pointing at.
 
         3. Which task was hardest, and what did you do when you got stuck?
 
-            Your answer:
+            Your answer: Any task past 1. I asked AI to walk me through it.
     */
 }
